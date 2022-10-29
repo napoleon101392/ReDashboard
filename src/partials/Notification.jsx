@@ -1,9 +1,6 @@
 import React from 'react';
 
-// TODO:: Create separate class to hold
-// message, style, icon
-export default function Notification(props) {
-    // Create success
+const Notification = (props) => {
     if (props.status == 'success') {
         var message = props.message;
         var style = {
@@ -27,3 +24,5 @@ export default function Notification(props) {
         </p>
     )
 }
+
+export default Notification
