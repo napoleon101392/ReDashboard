@@ -52,8 +52,8 @@ const Table = () => {
                             <td>{response.title}</td> 
 
                             <th>
-                                <a href="/#" className="btn btn-ghost btn-xs">Edit</a>
-                                <a href="/#" className="btn btn-ghost btn-xs">Delete</a>
+                                <a href="/#" className="btn btn-ghost btn-xs text-orange-400">Edit</a>
+                                <a href="/#" className="btn btn-ghost btn-xs text-red-400">Delete</a>
                             </th>
                         </tr>
                         ))
