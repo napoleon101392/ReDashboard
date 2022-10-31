@@ -1,21 +1,22 @@
 import React from 'react';
 
 const Notification = (props) => {
-    if (props.status == 'success') {
-        var message = props.message;
-        var style = {
+    let message, style, icon;
+
+    if (props.status === 'success') {
+        message = props.message;
+        style = {
             color: 'green'
         }
-        var icon = '✅';
+        icon = '✅';
     }
 
-    // Create Danger
-    if (props.status == 'danger') {
-        var message = props.message;
-        var style = {
+    if (props.status === 'danger') {
+        message = props.message;
+        style = {
             color: 'red'
         }
-        var icon = '❌';
+        icon = '❌';
     }
 
     return (
