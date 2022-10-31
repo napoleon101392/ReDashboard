@@ -2,22 +2,38 @@ import React from 'react';
 
 const Table = () => {
     return (
-        <table>
-            <thead>
-                <th>Col 1</th>
-                <th>Col 2</th>
-            </thead>
-            <tbody>
+        <div className="overflow-x-auto">
+            <table className="table w-full">
+                <thead>
                 <tr>
-                    <td>Data 1</td>
-                    <td>Data 2</td>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Job</th>
+                    <th>Favorite Color</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>Cy Ganderton</td>
+                    <td>Quality Control Specialist</td>
+                    <td>Blue</td>
                 </tr>
                 <tr>
-                    <td>Data 1</td>
-                    <td>Data 2</td>
+                    <th>2</th>
+                    <td>Hart Hagerty</td>
+                    <td>Desktop Support Technician</td>
+                    <td>Purple</td>
                 </tr>
-            </tbody>
-        </table>
+                <tr>
+                    <th>3</th>
+                    <td>Brice Swyre</td>
+                    <td>Tax Accountant</td>
+                    <td>Red</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     )
 }
 

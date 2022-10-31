@@ -1,11 +1,11 @@
-import Notification from './partials/Notification';
+import Alert from './partials/Alert';
 import Table from './partials/Table';
 
 function App() {
   return (
     <div className="App">
-      <Notification message="Success" status="success" />
-      <Notification message="Something went wrong" status="danger" />
+      <Alert message="Success" status="success" />
+      <Alert message="Something went wrong" status="error" />
       <Table />
     </div>
   );
