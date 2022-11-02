@@ -10,10 +10,18 @@ import {
 export default function Navigation() {
     return (
         <BrowserRouter>
-            <ul className="header">
-                <li><NavLink to="/">Home</NavLink></li>
-                <li><NavLink to="/contact">Contact</NavLink></li>
-            </ul>
+            <div className="navbar bg-base-100">
+                <div className="flex-1">
+                    <NavLink to="/" className="btn btn-ghost normal-case text-xl">Home</NavLink>
+                </div>
+                <div className="flex-none">
+                    <ul className="menu menu-horizontal p-0">
+                        <li>
+                            <NavLink to="/contact">Contact</NavLink>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
             <Routes>
                 <Route path="/" element={<Home />} />
