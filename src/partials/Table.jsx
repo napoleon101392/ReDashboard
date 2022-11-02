@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react';
 import Alert from './Alert';
 import axios from 'axios';
 
+// Code: <Table get="https://jsonplaceholder.typicode.com/posts?_limit=10" />
 // Todo:: 
 // Dynamic Column header
 // Dynamic response field

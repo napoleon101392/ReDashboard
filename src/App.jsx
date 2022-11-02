@@ -1,10 +1,9 @@
-import Table from './partials/Table';
+// import Table from './partials/Table';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
-    <div className="App">
-      <Table get="https://jsonplaceholder.typicode.com/posts?_limit=10" />
-    </div>
+    <Navigation/>
   );
 }
 
