@@ -3,7 +3,9 @@ import Navigation from './components/Navigation';
 
 function App() {
   return (
-    <Navigation/>
+    <div className='container mx-auto'>
+      <Navigation />
+    </div>
   );
 }
 

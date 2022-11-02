@@ -10,9 +10,9 @@ import {
 export default function Navigation() {
     return (
         <BrowserRouter>
-            <div className="navbar bg-base-100">
+            <div className="navbar">
                 <div className="flex-1">
-                    <NavLink to="/" className="btn btn-ghost normal-case text-xl">Home</NavLink>
+                    <NavLink to="/" className="btn btn-ghost normal-case text-xl">Logo</NavLink>
                 </div>
                 <div className="flex-none">
                     <ul className="menu menu-horizontal p-0">
