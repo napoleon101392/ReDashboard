@@ -4,7 +4,7 @@ const Alert = (props) => {
     return (
         <div className={`alert alert-${props.status} shadow-lg`}>
             <div>
-                <span>{props.message}</span>
+                <span>{ props.children }</span>
             </div>
         </div>
     )
