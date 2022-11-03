@@ -1,7 +1,5 @@
-const Logo = (props) => {
+export default function Logo() {
     return (
         <img src="../logo.svg" alt="Logo alt" />
     )
 }
-
-export default Logo
