@@ -1,6 +1,6 @@
 import Contact from '../pages/Contact'
 import Home from '../pages/Home'
-import Logo from './Logo'
+import Logo from '../partials/Logo'
 import {
     Routes,
     Route,
