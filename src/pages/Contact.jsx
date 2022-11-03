@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function Contact() {
     return (
         <div className="py-3 px-4 mx-auto max-w-screen-xl md:px-6">
