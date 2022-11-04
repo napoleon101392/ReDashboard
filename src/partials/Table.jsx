@@ -1,78 +1,81 @@
-import {useState, useEffect} from 'react';
-import Alert from './Alert';
-import axios from 'axios';
+import { useState, useEffect } from "react";
+import Alert from "./Alert";
+import axios from "axios";
 
 // Code: <Table get="https://jsonplaceholder.typicode.com/posts?_limit=10" />
-// Todo:: 
+// Todo::
 // Dynamic Column header
 // Dynamic response field
 const Table = (props) => {
-    const [data, setData] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-    useEffect(() => {
-        const getData = async () => {
-            try {
-                const response = await axios.get(props.get);
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const response = await axios.get(props.get);
 
-                setData(response.data);
-                setError(null);
-            } catch (err) {
-                setError(err.message);
-                setData(null);
-            } finally {
-                setLoading(false);
-            }
-        };
+        setData(response.data);
+        setError(null);
+      } catch (err) {
+        setError(err.message);
+        setData(null);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-        getData();
-    }, [props]);
-        
-    return (
-        <div className="overflow-x-auto">
-            {loading && <div>A moment please...</div>}
+    getData();
+  }, [props]);
 
-            {error && <Alert status="error">Something went wrong - {error}</Alert>}
+  return (
+    <div className="overflow-x-auto">
+      {loading && <div>A moment please...</div>}
 
-            <table className="table table-compact w-full">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Body</th>
-                        <th>Title</th>
-                        <th></th>
-                    </tr>
-                </thead> 
+      {error && <Alert status="error">Something went wrong - {error}</Alert>}
 
-                <tbody>
-                    {data &&
-                        data.map((response) => (
-                            <tr>
-                                <td>{response.id}</td> 
-                                <td>{response.body}</td>
-                                <td>{response.title}</td> 
+      <table className="table table-compact w-full">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Body</th>
+            <th>Title</th>
+            <th></th>
+          </tr>
+        </thead>
 
-                                <td>
-                                    <a href="/#" className="btn btn-ghost btn-xs text-orange-400">Edit</a>
-                                    <a href="/#" className="btn btn-ghost btn-xs text-red-400">Delete</a>
-                                </td>
-                            </tr>
-                        ))
-                    }
-                </tbody> 
+        <tbody>
+          {data &&
+            data.map((response) => (
+              <tr>
+                <td>{response.id}</td>
+                <td>{response.body}</td>
+                <td>{response.title}</td>
 
-                <tfoot>
-                    <tr>
-                        <th></th>
-                        <th>Body</th>
-                        <th>Title</th>
-                        <th></th>
-                    </tr>
-                </tfoot>
-            </table>
-        </div>
-    )
-}
+                <td>
+                  <a href="/#" className="btn btn-ghost btn-xs text-orange-400">
+                    Edit
+                  </a>
+                  <a href="/#" className="btn btn-ghost btn-xs text-red-400">
+                    Delete
+                  </a>
+                </td>
+              </tr>
+            ))}
+        </tbody>
 
-export default Table
+        <tfoot>
+          <tr>
+            <th></th>
+            <th>Body</th>
+            <th>Title</th>
+            <th></th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  );
+};
+
+export default Table;
